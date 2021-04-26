@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nobile:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap");
 body {
   margin: 0;
   height: 100vh;
   background: #191919;
   font-family: 'nobile';
-  position: relative;
 }
 
 *,
@@ -19,6 +18,73 @@ body {
   height: 100vh;
 }
 
+.container:first-child {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5% 50% auto;
+      grid-template-rows: 5% 50% auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 0.9em;
+}
+
+p {
+  line-height: 1.5em;
+  color: #c2c2c2;
+}
+
+.line {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 50%;
+  border-right: 1px solid white;
+  height: 50%;
+  margin-bottom: 8em;
+  position: relative;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 11px 0 11px;
+  border-color: white transparent transparent transparent;
+  right: -.7em;
+  bottom: -2px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subteext {
+  margin-top: 0;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
+
+.secondary {
+  margin-top: -3em;
+}
+
 .mountains,
 .kallio {
   position: absolute;
@@ -27,10 +93,46 @@ body {
 }
 
 .mountains {
-  top: 0;
+  top: -200px;
 }
 
 .kallio {
-  top: 50%;
+  top: 25%;
+}
+
+@media only screen and (min-width: 665px) {
+  .mountains {
+    top: -25%;
+  }
+  .kallio {
+    top: 35%;
+  }
+  h1 {
+    margin-top: -2em;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .mountains {
+    top: -30%;
+  }
+  .kallio {
+    top: 40%;
+  }
+  h1 {
+    margin-top: -2em;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .mountains {
+    top: -40%;
+  }
+  .kallio {
+    top: 60%;
+  }
+  h1 {
+    margin-top: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
