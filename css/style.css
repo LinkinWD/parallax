@@ -27,9 +27,11 @@ body {
 
 h1 {
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 3em;
   line-height: 0.9em;
+  font-size: clamp(3em, 7vw, 5em);
+  margin-top: 5rem;
 }
 
 p {
@@ -42,7 +44,7 @@ p {
       -ms-grid-row-align: end;
       align-self: end;
   width: 50%;
-  border-right: 1px solid white;
+  border-right: 3px solid purple;
   height: 50%;
   margin-bottom: 8em;
   position: relative;
@@ -55,7 +57,7 @@ p {
   height: 0;
   border-style: solid;
   border-width: 11px 11px 0 11px;
-  border-color: white transparent transparent transparent;
+  border-color: purple transparent transparent transparent;
   right: -.7em;
   bottom: -2px;
 }
@@ -82,7 +84,7 @@ h2 {
 }
 
 .secondary {
-  margin-top: -3em;
+  margin-top: 5em;
 }
 
 .mountains,
@@ -94,45 +96,76 @@ h2 {
 
 .mountains {
   top: -200px;
+  height: 80vh;
 }
 
 .kallio {
-  top: 25%;
+  top: 70%;
+}
+
+@media only screen and (min-width: 525px) {
+  .mountains {
+    top: -20%;
+  }
+  .kallio {
+    top: 70%;
+  }
 }
 
 @media only screen and (min-width: 665px) {
   .mountains {
-    top: -25%;
+    top: -20%;
   }
   .kallio {
-    top: 35%;
+    top: 70%;
   }
-  h1 {
-    margin-top: -2em;
+}
+
+@media only screen and (min-width: 730px) {
+  .mountains {
+    top: -20%;
+  }
+  .kallio {
+    top: 65%;
   }
 }
 
 @media only screen and (min-width: 930px) {
   .mountains {
-    top: -30%;
+    top: -20%;
   }
   .kallio {
-    top: 40%;
-  }
-  h1 {
-    margin-top: -2em;
+    top: 65%;
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1125px) {
   .mountains {
-    top: -40%;
+    top: -20%;
   }
   .kallio {
     top: 60%;
   }
   h1 {
-    margin-top: 1em;
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (min-width: 1320px) {
+  .mountains {
+    top: -20%;
+  }
+  .kallio {
+    top: 55%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .mountains {
+    top: -20%;
+  }
+  .kallio {
+    top: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */
